@@ -7,7 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton x:Name="recordBtn" Label="Record" Icon="Microphone" Click="recordBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="stopBtn" Label="Stop" Icon="Stop" Click="stopBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="playBtn" Label="Play" Icon="Play" Click="playBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="createBtn" Label="Create Profile" Icon="People" Click="createProfileBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="enrollBtn" Label="Enroll" Icon="Add" Click="enrollBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="verifyBtn" Label="Verify Enrollment" Icon="Download" Click="verifyBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="validateBtn" Label="Validate" Icon="Accept" Click="validateBtn_Click"></AppBarButton>
+                <AppBarButton x:Name="getProfilesBtn" Label="Get All Profiles" Icon="Download" Click="getProfilesBtn_Click"></AppBarButton>
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="txtBoxOutput" ScrollViewer.VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="58,293,0,0" Text="" VerticalAlignment="Top" Height="471" Width="1358"/>
+        <TextBox x:Name="txtBoxGuid" HorizontalAlignment="Left" Margin="142,220,0,0" Text="" VerticalAlignment="Top" Width="1274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,220,0,0" Text="GUID:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
 
     </Grid>
 </Page>
